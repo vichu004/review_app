@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews From</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Django Course Feedback Page</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% if has_error %}
+        <p> This Form is Invalid</p>
+        {% endif %}
+        {{form}}
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</body>
+</html>
